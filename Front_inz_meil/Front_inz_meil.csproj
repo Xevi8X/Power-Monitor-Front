@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LiveCharts.WinForms.NetCore3" Version="0.9.7" />
+    <PackageReference Include="runtime.native.System.IO.Ports" Version="7.0.0-rc.2.22472.3" />
+    <PackageReference Include="System.IO.Ports" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Images\BulbOff.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Images\BulbOn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
