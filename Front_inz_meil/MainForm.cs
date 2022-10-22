@@ -49,9 +49,12 @@ namespace Front_inz_meil
 
         private void buttonEnability()
         {
+
             btnAuto.Enabled = state != STATE.AUTO;
 
             btnManual.Enabled = state != STATE.MANUAL;
+        
+            btnFourier.Enabled = (measures != null && measures.Count > 0);
         }
 
         private void setGauges()
@@ -208,6 +211,7 @@ namespace Front_inz_meil
 
         private void updateChart()
         {
+            buttonEnability();
             const int skip = 200;
             chart.Series.Clear();
             chart.AxisX.Clear();
@@ -285,7 +289,7 @@ namespace Front_inz_meil
             AUTO = 0, MANUAL = 1
         }
 
-        private struct Measure
+        public struct Measure
         {
             public long microsecounds;
             public double voltage;
@@ -453,6 +457,13 @@ namespace Front_inz_meil
         private void btnComponents_Click(object sender, EventArgs e)
         {
             Transmit(Message.CALIBRATE_COMPONENTS, null);
+        }
+
+        private void btnFourier_Click(object sender, EventArgs e)
+        {
+            (double[] hz, double[] mag) = FourierHandler.Calc(measures);
+            Fourier_chart fourier_Chart = new Fourier_chart(hz,mag);
+            fourier_Chart.Show();
         }
     }
 }

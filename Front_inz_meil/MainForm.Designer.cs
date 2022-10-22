@@ -76,9 +76,9 @@
             this.btnDownload = new System.Windows.Forms.Button();
             this.btnCOM = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnComponents = new System.Windows.Forms.Button();
             this.btnCalib = new System.Windows.Forms.Button();
             this.checkBoxAutoScroll = new System.Windows.Forms.CheckBox();
-            this.btnComponents = new System.Windows.Forms.Button();
             this.tableLayoutPanelGauges.SuspendLayout();
             this.tabCtrl.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -635,6 +635,7 @@
             this.btnFourier.TabIndex = 1;
             this.btnFourier.Text = "Fourier Analysis";
             this.btnFourier.UseVisualStyleBackColor = true;
+            this.btnFourier.Click += new System.EventHandler(this.btnFourier_Click);
             // 
             // btnDownload
             // 
@@ -678,6 +679,18 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(362, 31);
             this.tableLayoutPanel1.TabIndex = 9;
             // 
+            // btnComponents
+            // 
+            this.btnComponents.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnComponents.Location = new System.Drawing.Point(219, 3);
+            this.btnComponents.Name = "btnComponents";
+            this.btnComponents.Size = new System.Drawing.Size(125, 25);
+            this.btnComponents.TabIndex = 11;
+            this.btnComponents.Text = "Calib. components";
+            this.btnComponents.UseVisualStyleBackColor = true;
+            this.btnComponents.Click += new System.EventHandler(this.btnComponents_Click);
+            // 
             // btnCalib
             // 
             this.btnCalib.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -702,18 +715,6 @@
             this.checkBoxAutoScroll.TabIndex = 10;
             this.checkBoxAutoScroll.Text = "Auto-scroll";
             this.checkBoxAutoScroll.UseVisualStyleBackColor = true;
-            // 
-            // btnComponents
-            // 
-            this.btnComponents.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnComponents.Location = new System.Drawing.Point(219, 3);
-            this.btnComponents.Name = "btnComponents";
-            this.btnComponents.Size = new System.Drawing.Size(125, 25);
-            this.btnComponents.TabIndex = 11;
-            this.btnComponents.Text = "Calib. components";
-            this.btnComponents.UseVisualStyleBackColor = true;
-            this.btnComponents.Click += new System.EventHandler(this.btnComponents_Click);
             // 
             // MainForm
             // 
