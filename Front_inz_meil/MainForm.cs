@@ -92,7 +92,7 @@ namespace Front_inz_meil
             try
             {
                 serialPort.Open();
-
+                clearLogs();
             }
             catch (Exception e)
             {
@@ -274,6 +274,12 @@ namespace Front_inz_meil
         }
 
         private void btnClear_Click(object sender, EventArgs e)
+        {
+            richTxtRaw.Text = "";
+            richTxtRaw.AppendText("...Start...", System.Drawing.Color.Black);
+        }
+
+        private void clearLogs()
         {
             richTxtRaw.Text = "";
             richTxtRaw.AppendText("...Start...", System.Drawing.Color.Black);

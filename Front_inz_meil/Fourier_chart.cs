@@ -69,7 +69,7 @@ namespace Front_inz_meil
                 Title = "Magnitude [V]",
                 DisableAnimations = true,
                 MinValue = 0.0,
-                MaxValue = 250.0,
+                MaxValue = 280.0,
             }); ;
         }
     }

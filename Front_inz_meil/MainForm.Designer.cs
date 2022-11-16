@@ -114,7 +114,7 @@
             this.lblSignature.Name = "lblSignature";
             this.lblSignature.Size = new System.Drawing.Size(156, 15);
             this.lblSignature.TabIndex = 1;
-            this.lblSignature.Text = "v1.0 by Wojciech Gajda 2022";
+            this.lblSignature.Text = "v1.1 by Wojciech Gajda 2022";
             this.lblSignature.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnClear
